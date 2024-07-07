@@ -6,12 +6,12 @@
 
 [node name="Main" type="Node"]
 
-[node name="Dino" parent="." instance=ExtResource("1_1wkau")]
-position = Vector2(96, 486)
+[node name="Bg" parent="." instance=ExtResource("3_5df38")]
 
 [node name="Ground" parent="." instance=ExtResource("2_ceuoc")]
 
-[node name="Bg" parent="." instance=ExtResource("3_5df38")]
+[node name="Dino" parent="." instance=ExtResource("1_1wkau")]
+position = Vector2(96, 486)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
