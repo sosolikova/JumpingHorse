@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://bu1oib0l6wcs0"]
+[gd_scene load_steps=22 format=3 uid="uid://bu1oib0l6wcs0"]
 
 [ext_resource type="Texture2D" uid="uid://da4q6msmq5xwr" path="res://assets/img/mort.png" id="1_k7hiq"]
+[ext_resource type="AudioStream" uid="uid://dquh4qshancqi" path="res://assets/jump.wav" id="2_n3p8f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ott01"]
 atlas = ExtResource("1_k7hiq")
@@ -144,17 +145,24 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kdi0"]
+size = Vector2(10, 14)
+
 [node name="Dino" type="CharacterBody2D"]
 scale = Vector2(8, 8)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_kg0vs")
-animation = &"idle"
+animation = &"duck"
 autoplay = "idle"
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_1kdi0")
 
 [node name="DuckCol" type="CollisionShape2D" parent="."]
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_n3p8f")
+volume_db = -25.0
