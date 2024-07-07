@@ -8,6 +8,7 @@ const SCORE_MODIFIER : int = 10
 var speed : float
 const START_SPEED : float = 10.0
 const MAX_SPEED : int = 25
+const SPEED_MODIFIER : int = 5000
 var screen_size : Vector2i
 var game_running : bool
 
@@ -33,7 +34,9 @@ func new_game():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if game_running:
-		speed = START_SPEED
+		speed = START_SPEED + score / SPEED_MODIFIER
+		if speed > MAX_SPEED:
+			speed = MAX_SPEED
 		
 		# Move dino and camera
 		$Dino.position.x += speed
