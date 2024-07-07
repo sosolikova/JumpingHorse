@@ -1,0 +1,160 @@
+[gd_scene load_steps=20 format=3 uid="uid://bu1oib0l6wcs0"]
+
+[ext_resource type="Texture2D" uid="uid://da4q6msmq5xwr" path="res://assets/img/mort.png" id="1_k7hiq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ott01"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(432, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sjug"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(456, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g36t"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(480, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyldu"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(504, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_heyfc"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(528, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s0vy"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(552, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du4oo"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8g73"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e60rt"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm1lt"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq04n"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avqlr"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i10a7"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klpi7"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5bkp"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xamka"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apa68"]
+atlas = ExtResource("1_k7hiq")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kg0vs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ott01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sjug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g36t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyldu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_heyfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s0vy")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du4oo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8g73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e60rt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm1lt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq04n")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avqlr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i10a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klpi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5bkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xamka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apa68")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="Dino" type="CharacterBody2D"]
+scale = Vector2(8, 8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_kg0vs")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="RunCol" type="CollisionShape2D" parent="."]
+
+[node name="DuckCol" type="CollisionShape2D" parent="."]
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
