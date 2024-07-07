@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bu1oib0l6wcs0"]
+[gd_scene load_steps=24 format=3 uid="uid://bu1oib0l6wcs0"]
 
 [ext_resource type="Script" path="res://scenes/dino.gd" id="1_bdhq7"]
 [ext_resource type="Texture2D" uid="uid://da4q6msmq5xwr" path="res://assets/img/mort.png" id="1_k7hiq"]
@@ -149,6 +149,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kdi0"]
 size = Vector2(10, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_miygo"]
+size = Vector2(10, 14)
+
 [node name="Dino" type="CharacterBody2D"]
 z_index = 1
 scale = Vector2(8, 8)
@@ -165,6 +168,8 @@ position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_1kdi0")
 
 [node name="DuckCol" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_miygo")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_n3p8f")
