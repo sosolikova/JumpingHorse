@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw565o7xh8xiq"]
+
+[ext_resource type="Texture2D" uid="uid://cgds2ik6trifx" path="res://assets/img/obstacles/rock.png" id="1_sclul"]
+
+[node name="rock" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_sclul")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(-17.25, -8.25, -5, -10.75, 22.25, 10.75, -21, 10.5)
