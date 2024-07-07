@@ -6,8 +6,18 @@ const JUMP_SPEED : int = -1800
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
-	if Input.is_action_pressed("ui_accept"):
-		velocity.y = JUMP_SPEED
+	if is_on_floor():
+		$RunCol.disabled = false
+		if Input.is_action_pressed("ui_accept"):
+			velocity.y = JUMP_SPEED
+			#$JumpSound.play()
+		elif Input.is_action_pressed("ui-down"):
+			$AnimatedSprite2D.play("duck")
+			$RunCol.disabled = false
+		else:
+			$AnimatedSprite2D.play("run")
+	else:
+		$AnimatedSprite2D.play("jump")
 	
 	move_and_slide()
 
