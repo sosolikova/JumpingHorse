@@ -5,6 +5,9 @@ var stump_scene = preload("res://scenes/stump.tscn")
 var rock_scene = preload("res://scenes/rock.tscn")
 var barell_scene = preload("res://scenes/barell.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
+var obstacle_types := [stump_scene, rock_scene, barell_scene]
+var obstacles : Array
+var bird_heights := [200, 390]
 
 
 
@@ -19,6 +22,7 @@ const MAX_SPEED : int = 25
 const SPEED_MODIFIER : int = 5000
 var screen_size : Vector2i
 var game_running : bool
+var last_obs
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
