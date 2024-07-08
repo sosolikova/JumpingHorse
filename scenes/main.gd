@@ -73,7 +73,7 @@ func _process(delta):
 
 func generate_obs():
 	# Generate ground obstacles
-	if obstacles.is_empty():
+	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var obs
 		obs = obs_type.instantiate()
