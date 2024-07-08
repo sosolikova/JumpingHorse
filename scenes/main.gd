@@ -90,6 +90,14 @@ func generate_obs():
 			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 5
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
+		# Additionally random chance to spawn a bird
+		if difficulty == 0:#MAX_DIFFICULTY:
+			if (randi() % 2) == 0:
+				# Generate bird obstacles
+				obs = bird_scene.instantiate()
+				var obs_x : int = screen_size.x + score + 100
+				var obs_y : int = bird_heights[randi() % bird_heights.size()]
+				add_obs(obs, obs_x, obs_y)
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
