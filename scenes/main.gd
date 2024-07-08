@@ -106,7 +106,7 @@ func generate_obs():
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
 		# Additionally random chance to spawn a bird
-		if difficulty == 0:#MAX_DIFFICULTY:
+		if difficulty == MAX_DIFFICULTY:
 			if (randi() % 2) == 0:
 				# Generate bird obstacles
 				obs = bird_scene.instantiate()
