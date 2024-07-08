@@ -18,6 +18,7 @@ var difficulty
 const MAX_DIFFICULTY : int = 2
 var score : int
 const SCORE_MODIFIER : int = 10
+var high_score : int
 var speed : float
 const START_SPEED : float = 10.0
 const MAX_SPEED : int = 25
@@ -131,6 +132,12 @@ func hit_obs(body):
 		
 func show_score():
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
+	
+func check_high_score():
+	if score > high_score:
+		high_score = score
+		$HUD.get_node("HighScoreLabel").text = "HIGH SCORE: " + str(high_score / SCORE_MODIFIER)
+	
 
 func adjust_difficulty():
 	difficulty = score / SPEED_MODIFIER
@@ -138,6 +145,7 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 	
 func game_over():
+	check_high_score()
 	get_tree().paused = true
 	game_running = false
 	$GameOver.show()
