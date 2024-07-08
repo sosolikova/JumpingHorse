@@ -82,9 +82,13 @@ func generate_obs():
 		var obs_x : int = screen_size.x + score + 100
 		var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 5
 		last_obs = obs
-		obs.position = Vector2i(obs_x, obs_y)
-		add_child(obs)
-		obstacles.append(obs)
+		add_obs(obs, obs_x, obs_y)
+
+func add_obs(obs, x, y):
+	obs.position = Vector2i(x, y)
+	add_child(obs)
+	obstacles.append(obs)
+	
 	
 		
 func show_score():
