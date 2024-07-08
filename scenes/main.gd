@@ -31,6 +31,7 @@ var last_obs
 func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
+	$GameOver.get_node("Button").pressed.connect(new_game)
 	new_game()
 
 func new_game():
@@ -38,7 +39,15 @@ func new_game():
 	score = 0
 	show_score()
 	game_running = false
+	get_tree().paused = false
 	difficulty = 0
+	
+	# Delete all obstacles
+	for obs in obstacles:
+		obs.queue_free()
+	obstacles.clear()
+		
+	
 	# Reset the nodes
 	$Dino.position = DINO_START_POS
 	$Dino.velocity = Vector2i(0,0)
