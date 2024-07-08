@@ -1,5 +1,13 @@
 extends Node
 
+# Preload obstacles
+var stump_scene = preload("res://scenes/stump.tscn")
+var rock_scene = preload("res://scenes/rock.tscn")
+var barell_scene = preload("res://scenes/barell.tscn")
+var bird_scene = preload("res://scenes/bird.tscn")
+
+
+
 # Game variables
 const DINO_START_POS := Vector2i(150, 485)
 const CAM_START_POS := Vector2i(576, 324)
@@ -37,6 +45,7 @@ func _process(delta):
 		speed = START_SPEED + score / SPEED_MODIFIER
 		if speed > MAX_SPEED:
 			speed = MAX_SPEED
+			
 		
 		# Move dino and camera
 		$Dino.position.x += speed
