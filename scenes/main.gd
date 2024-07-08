@@ -106,12 +106,17 @@ func generate_obs():
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
+	obs.body_entered.connect(hit_obs)
 	add_child(obs)
 	obstacles.append(obs)
 
 func remove_obs(obs):
 	obs.queue_free()
 	obstacles.erase(obs)
+
+func hit_obs(body):
+	if body.name == "Dino":
+		print("Collision")
 	
 		
 func show_score():
