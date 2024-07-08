@@ -45,8 +45,9 @@ func new_game():
 	$Camera2D.position = CAM_START_POS
 	$Ground.position = Vector2i(0,0)
 	
-	# Reset hud
+	# Reset hud and game over screen
 	$HUD.get_node("StartLabel").show()
+	$GameOver.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -130,3 +131,4 @@ func adjust_difficulty():
 func game_over():
 	get_tree().paused = true
 	game_running = false
+	$GameOver.show()

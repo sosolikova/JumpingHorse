@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://drcnueq8uacpp" path="res://assets/fonts/retro.ttf" id="1_jvc5o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqhy4"]
-bg_color = Color(0.23006, 0.698164, 0.475739, 1)
+bg_color = Color(0.233892, 0.709256, 0.219237, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uofnd"]
 bg_color = Color(0.757958, 0.524432, 0.584594, 1)
