@@ -116,7 +116,7 @@ func remove_obs(obs):
 
 func hit_obs(body):
 	if body.name == "Dino":
-		print("Collision")
+		game_over()
 	
 		
 func show_score():
@@ -127,3 +127,6 @@ func adjust_difficulty():
 	if difficulty > MAX_DIFFICULTY:
 		difficulty = MAX_DIFFICULTY
 	
+func game_over():
+	get_tree().paused = true
+	game_running = false

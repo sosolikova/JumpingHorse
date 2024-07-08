@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4m57ag6ay54m"]
+
+[ext_resource type="FontFile" uid="uid://drcnueq8uacpp" path="res://assets/fonts/retro.ttf" id="1_jvc5o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqhy4"]
+bg_color = Color(0.23006, 0.698164, 0.475739, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uofnd"]
+bg_color = Color(0.757958, 0.524432, 0.584594, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbqjo"]
+bg_color = Color(0.656143, 0.531925, 0.822378, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_c4fdy"]
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -27.5
+offset_right = 125.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.500498, 0.536965, 0.427563, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.847059, 0, 1)
+theme_override_fonts/font = ExtResource("1_jvc5o")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_kqhy4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uofnd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xbqjo")
+text = "RESTART"
+icon = SubResource("CanvasTexture_c4fdy")
