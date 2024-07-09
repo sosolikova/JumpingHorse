@@ -3,11 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://dbmthm4hyw1in" path="res://assets/img/obstacles/fence.png" id="1_hutn1"]
 
 [node name="fence" type="Area2D"]
+position = Vector2(0, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
+position = Vector2(0, 40)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_hutn1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(0.3, 0.3)
+position = Vector2(0, 40)
+scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(184, -22.2, 160, 213.333, 133.8, 147, 2.89999, 49.2, -30, 78.2, -39.1, 18.7, -131, -50.7, -160, -26.6667, -160, -213.333)

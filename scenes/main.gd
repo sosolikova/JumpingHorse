@@ -5,7 +5,12 @@ var stump_scene = preload("res://scenes/stump.tscn")
 var rock_scene = preload("res://scenes/rock.tscn")
 var barell_scene = preload("res://scenes/barell.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
-var obstacle_types := [stump_scene, rock_scene, barell_scene]
+var hay_scene = preload("res://scenes/hay.tscn")
+var fence_scene = preload("res://scenes/fence.tscn")
+var tree_stump_scene = preload("res://scenes/tree_stump.tscn")
+var crate_scene = preload("res://scenes/crate.tscn")
+
+var obstacle_types := [stump_scene, rock_scene, barell_scene, hay_scene, fence_scene, tree_stump_scene, crate_scene]
 var obstacles : Array
 var bird_heights := [200, 390]
 

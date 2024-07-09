@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/horse.gd" id="1_bdhq7"]
 [ext_resource type="Texture2D" uid="uid://da4q6msmq5xwr" path="res://assets/img/mort.png" id="1_k7hiq"]
 [ext_resource type="AudioStream" uid="uid://dquh4qshancqi" path="res://assets/jump.wav" id="2_n3p8f"]
+[ext_resource type="Texture2D" uid="uid://ppe8p438u7re" path="res://assets/img/runningHorse.png" id="3_i8d31"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ott01"]
 atlas = ExtResource("1_k7hiq")
@@ -28,25 +29,21 @@ region = Rect2(528, 0, 24, 24)
 atlas = ExtResource("1_k7hiq")
 region = Rect2(552, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_du4oo"]
-atlas = ExtResource("1_k7hiq")
-region = Rect2(0, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy3im"]
+atlas = ExtResource("3_i8d31")
+region = Rect2(344, 0, 172, 161)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g8g73"]
-atlas = ExtResource("1_k7hiq")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e60rt"]
-atlas = ExtResource("1_k7hiq")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fm1lt"]
-atlas = ExtResource("1_k7hiq")
-region = Rect2(72, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_keqwp"]
+atlas = ExtResource("3_i8d31")
+region = Rect2(13, 0, 171, 155)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kq04n"]
 atlas = ExtResource("1_k7hiq")
 region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npd5t"]
+atlas = ExtResource("3_i8d31")
+region = Rect2(13, 155, 171, 155)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_avqlr"]
 atlas = ExtResource("1_k7hiq")
@@ -99,24 +96,21 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_du4oo")
+"texture": SubResource("AtlasTexture_oy3im")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g8g73")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e60rt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fm1lt")
+"texture": SubResource("AtlasTexture_keqwp")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 10.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kq04n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npd5t")
 }],
 "loop": true,
 "name": &"jump",
@@ -159,8 +153,9 @@ script = ExtResource("1_bdhq7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_kg0vs")
-animation = &"run"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
