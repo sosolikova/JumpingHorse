@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://bu1oib0l6wcs0"]
 
-[ext_resource type="Script" path="res://scenes/dino.gd" id="1_bdhq7"]
+[ext_resource type="Script" path="res://scenes/horse.gd" id="1_bdhq7"]
 [ext_resource type="Texture2D" uid="uid://da4q6msmq5xwr" path="res://assets/img/mort.png" id="1_k7hiq"]
 [ext_resource type="AudioStream" uid="uid://dquh4qshancqi" path="res://assets/jump.wav" id="2_n3p8f"]
 
@@ -152,7 +152,7 @@ size = Vector2(10, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_miygo"]
 size = Vector2(10, 14)
 
-[node name="Dino" type="CharacterBody2D"]
+[node name="Horse" type="CharacterBody2D"]
 z_index = 1
 scale = Vector2(8, 8)
 script = ExtResource("1_bdhq7")
@@ -160,7 +160,7 @@ script = ExtResource("1_bdhq7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_kg0vs")
-animation = &"duck"
+animation = &"run"
 autoplay = "idle"
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
@@ -173,4 +173,4 @@ shape = SubResource("RectangleShape2D_miygo")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_n3p8f")
-volume_db = -25.0
+volume_db = -10.0
