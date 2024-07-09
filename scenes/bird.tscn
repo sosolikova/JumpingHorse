@@ -50,7 +50,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"flying",
-"speed": 6.0
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67dhv"]
@@ -65,7 +65,7 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ypq08")
 animation = &"flying"
 autoplay = "flying"
-frame_progress = 0.467408
+frame_progress = 0.544806
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 4)
