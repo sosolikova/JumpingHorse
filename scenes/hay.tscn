@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxbweicmu4c6f"]
+
+[ext_resource type="Texture2D" uid="uid://culgk0tcqy3ke" path="res://assets/img/obstacles/hay.png" id="1_1xhis"]
+
+[node name="hay" type="Area2D"]
+position = Vector2(0, -8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_1xhis")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.3, 0.3)
+polygon = PackedVector2Array(217.7, -121.5, 240, 40, 216.1, 79.5, 180, 99.9, 35.5, 137.5, -104, 160.9, -185.5, 155.5, -245, 70.5, -243.1, 70.5, -238.8, -23.5, -211.1, -61.5, -122, -92.6, 120, -160)

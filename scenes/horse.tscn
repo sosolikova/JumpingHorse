@@ -173,4 +173,4 @@ shape = SubResource("RectangleShape2D_miygo")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_n3p8f")
-volume_db = -10.0
+volume_db = -25.0
