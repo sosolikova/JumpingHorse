@@ -80,7 +80,7 @@ scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_kg0vs")
 animation = &"duck"
 autoplay = "idle"
-frame_progress = 0.762382
+frame_progress = 0.26593
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1)
