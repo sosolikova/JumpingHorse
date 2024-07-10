@@ -21,12 +21,12 @@ func _physics_process(delta):
 				$RunCol.disabled = false
 			else:
 				$AnimatedSprite2D.play("run")
-				$RunSound.play()
+				$IdleSound.play()
 				
 				
 	else:
 		$AnimatedSprite2D.play("jump")
-		$RunSound.play()
+		$IdleSound.play()
 	
 	move_and_slide()
 

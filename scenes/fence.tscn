@@ -6,11 +6,11 @@
 position = Vector2(0, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 55)
+position = Vector2(0, 67)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_hutn1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, 55)
+position = Vector2(0, 67)
 scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(144, -8, 152.2, 8, 146.1, 182, 112, 184, 96, 136, -64, 88, -64, 120, -99, 122.3, -101, -25, -82, -43.4)
