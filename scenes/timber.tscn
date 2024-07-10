@@ -5,11 +5,11 @@
 [node name="timber" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 60)
+position = Vector2(0, 73)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_yjlgh")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, 60)
+position = Vector2(0, 73)
 scale = Vector2(0.6, 0.6)
 polygon = PackedVector2Array(-72, -80, 128, 40, 104, 88, 40, 96, -24, 56, -112, -40, -120, -72, -88, -88)

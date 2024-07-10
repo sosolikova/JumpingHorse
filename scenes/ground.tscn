@@ -14,4 +14,6 @@ centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1152, 600)
+position = Vector2(1267, 600)
+scale = Vector2(1.1, 1.1)
 shape = SubResource("RectangleShape2D_jklv8")

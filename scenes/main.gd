@@ -11,7 +11,7 @@ var tree_stump_scene = preload("res://scenes/tree_stump.tscn")
 var crate_scene = preload("res://scenes/crate.tscn")
 var timber_scene = preload("res://scenes/timber.tscn")
 
-var obstacle_types := [stump_scene, rock_scene, hay_scene, fence_scene, tree_stump_scene, crate_scene, timber_scene]
+var obstacle_types := [rock_scene, hay_scene, fence_scene, tree_stump_scene, crate_scene, timber_scene]
 var obstacles : Array
 var bird_heights := [200, 390]
 
