@@ -14,5 +14,6 @@ func test_gravity():
 	horse._physics_process(1)
 	assert_eq(horse.velocity.y, GRAVITY, "Gravity should be applied to velocity")
 	
+	
 func run():
 	test_gravity()

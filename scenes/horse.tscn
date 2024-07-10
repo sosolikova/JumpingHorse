@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bu1oib0l6wcs0"]
+[gd_scene load_steps=16 format=3 uid="uid://bu1oib0l6wcs0"]
 
 [ext_resource type="Script" path="res://scenes/horse.gd" id="1_bdhq7"]
 [ext_resource type="AudioStream" uid="uid://dquh4qshancqi" path="res://assets/jump.wav" id="2_n3p8f"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cwufy76e56p3l" path="res://assets/img/horses/jump03.png" id="7_wqdub"]
 [ext_resource type="Texture2D" uid="uid://1r3ij6u6k2ci" path="res://assets/img/horses/run01.png" id="8_1du8s"]
 [ext_resource type="Texture2D" uid="uid://dqrwd7ho1kcg1" path="res://assets/img/horses/run02.png" id="9_rhe4s"]
+[ext_resource type="AudioStream" uid="uid://dilbj6yp4a27y" path="res://assets/28550.wav" id="11_i7xog"]
+[ext_resource type="AudioStream" uid="uid://duubnccv76rb1" path="res://assets/runningSound.wav" id="12_451vl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kg0vs"]
 animations = [{
@@ -90,7 +92,7 @@ scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_kg0vs")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.203051
+frame_progress = 0.485369
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 2)
@@ -103,3 +105,9 @@ shape = SubResource("RectangleShape2D_miygo")
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_n3p8f")
 volume_db = -25.0
+
+[node name="IdleSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_i7xog")
+
+[node name="RunSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_451vl")
