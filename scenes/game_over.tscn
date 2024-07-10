@@ -1,15 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4m57ag6ay54m"]
+[gd_scene load_steps=5 format=3 uid="uid://c4m57ag6ay54m"]
 
-[ext_resource type="FontFile" uid="uid://drcnueq8uacpp" path="res://assets/fonts/retro.ttf" id="1_jvc5o"]
+[ext_resource type="FontFile" uid="uid://xush8epnn5k" path="res://assets/fonts/Champagne_LimousinesBold.ttf" id="1_yii8x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqhy4"]
-bg_color = Color(0.233892, 0.709256, 0.219237, 1)
+bg_color = Color(0.105294, 0.262052, 0.236838, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uofnd"]
-bg_color = Color(0.757958, 0.524432, 0.584594, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbqjo"]
-bg_color = Color(0.656143, 0.531925, 0.822378, 1)
+bg_color = Color(0.690196, 0.741176, 0.14902, 1)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_c4fdy"]
 
@@ -27,12 +24,11 @@ offset_right = 125.0
 offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.500498, 0.536965, 0.427563, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.847059, 0, 1)
-theme_override_fonts/font = ExtResource("1_jvc5o")
+theme_override_colors/font_color = Color(0.88616, 0.904049, 0.853271, 1)
+theme_override_colors/font_pressed_color = Color(0.941435, 0.927699, 0.911347, 1)
+theme_override_fonts/font = ExtResource("1_yii8x")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_kqhy4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_uofnd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xbqjo")
 text = "RESTART"
 icon = SubResource("CanvasTexture_c4fdy")
