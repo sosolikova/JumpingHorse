@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://te5l1ye7i8vy"]
+[gd_scene load_steps=12 format=3 uid="uid://te5l1ye7i8vy"]
 
 [ext_resource type="Script" path="res://scenes/bird.gd" id="1_a0vid"]
 [ext_resource type="Texture2D" uid="uid://bcslxcb55iidm" path="res://assets/img/obstacles/sparrow.png" id="2_t0b7g"]
+[ext_resource type="AudioStream" uid="uid://d14h28jtfa74e" path="res://assets/birdSound.wav" id="3_l8m5g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btufh"]
 atlas = ExtResource("2_t0b7g")
@@ -65,8 +66,12 @@ scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_ypq08")
 animation = &"flying"
 autoplay = "flying"
-frame_progress = 0.0991127
+frame_progress = 0.962431
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_67dhv")
+
+[node name="BirdSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_l8m5g")
+volume_db = 10.0

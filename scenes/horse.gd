@@ -10,13 +10,10 @@ func _physics_process(delta):
 	if is_on_floor():
 		if not get_parent().game_running:
 			$AnimatedSprite2D.play("idle")
-			
-			
 		else:
 			$RunCol.disabled = false
 			if Input.is_action_pressed("ui_accept"):
 				velocity.y = JUMP_SPEED
-				$RunSound.play()
 				$JumpSound.play()
 			elif Input.is_action_pressed("ui_down"):
 				#$JumpSound.play()
