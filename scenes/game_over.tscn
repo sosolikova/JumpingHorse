@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4m57ag6ay54m"]
+[gd_scene load_steps=6 format=3 uid="uid://c4m57ag6ay54m"]
 
 [ext_resource type="FontFile" uid="uid://xush8epnn5k" path="res://assets/fonts/Champagne_LimousinesBold.ttf" id="1_yii8x"]
 
@@ -6,6 +6,9 @@
 bg_color = Color(0.105294, 0.262052, 0.236838, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uofnd"]
+bg_color = Color(0.690196, 0.741176, 0.14902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlekr"]
 bg_color = Color(0.690196, 0.741176, 0.14902, 1)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_c4fdy"]
@@ -30,5 +33,6 @@ theme_override_fonts/font = ExtResource("1_yii8x")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_kqhy4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_uofnd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xlekr")
 text = "RESTART"
 icon = SubResource("CanvasTexture_c4fdy")
