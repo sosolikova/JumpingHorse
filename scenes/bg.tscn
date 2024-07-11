@@ -1,15 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://dx1qu52g3qgpr"]
 
-[ext_resource type="Texture2D" uid="uid://bxohrvbfoopkm" path="res://assets/img/background/plx-1.png" id="1_hsxp6"]
 [ext_resource type="Texture2D" uid="uid://d3ogv6x6wpnj3" path="res://assets/img/background/poz01.png" id="2_81uf5"]
 [ext_resource type="Texture2D" uid="uid://evphw2x0fo6x" path="res://assets/img/background/poz03.png" id="3_ktwtd"]
 [ext_resource type="Texture2D" uid="uid://xrqp5i7xe4ot" path="res://assets/img/background/poz04.png" id="4_8n0cm"]
 [ext_resource type="Texture2D" uid="uid://irf82vtyy3dj" path="res://assets/img/background/poz02.png" id="5_877ku"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fd5rf"]
+load_path = "res://.godot/imported/plx-1.png-aa1868fc2289dc48b2d1e80254eec258.ctex"
+
 [node name="Bg" type="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hsxp6")
+texture = SubResource("CompressedTexture2D_fd5rf")
 centered = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
