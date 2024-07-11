@@ -1,0 +1,113 @@
+[gd_scene load_steps=16 format=3 uid="uid://bu1oib0l6wcs0"]
+
+[ext_resource type="Script" path="res://scenes/horse.gd" id="1_bdhq7"]
+[ext_resource type="AudioStream" uid="uid://dquh4qshancqi" path="res://assets/jump.wav" id="2_n3p8f"]
+[ext_resource type="Texture2D" uid="uid://cuad25rkmupbr" path="res://assets/img/horses/idle01.png" id="3_fowpl"]
+[ext_resource type="Texture2D" uid="uid://cve26v54onm2u" path="res://assets/img/horses/duck.png" id="3_qhkdy"]
+[ext_resource type="Texture2D" uid="uid://c8s7lm106aqpb" path="res://assets/img/horses/idle04.png" id="4_hlet8"]
+[ext_resource type="Texture2D" uid="uid://dn1s8felsucdm" path="res://assets/img/horses/jump01.png" id="5_j8gb6"]
+[ext_resource type="Texture2D" uid="uid://d28apy1lb4clk" path="res://assets/img/horses/jump02.png" id="6_unta4"]
+[ext_resource type="Texture2D" uid="uid://cwufy76e56p3l" path="res://assets/img/horses/jump03.png" id="7_wqdub"]
+[ext_resource type="Texture2D" uid="uid://1r3ij6u6k2ci" path="res://assets/img/horses/run01.png" id="8_1du8s"]
+[ext_resource type="Texture2D" uid="uid://dqrwd7ho1kcg1" path="res://assets/img/horses/run02.png" id="9_rhe4s"]
+[ext_resource type="AudioStream" uid="uid://dilbj6yp4a27y" path="res://assets/28550.wav" id="11_i7xog"]
+[ext_resource type="AudioStream" uid="uid://duubnccv76rb1" path="res://assets/runningSound.wav" id="12_451vl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kg0vs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hlet8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qhkdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qhkdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qhkdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hlet8")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fowpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hlet8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_j8gb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_unta4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_unta4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wqdub")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1du8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rhe4s")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kdi0"]
+size = Vector2(13, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_miygo"]
+size = Vector2(13, 9)
+
+[node name="Horse" type="CharacterBody2D"]
+z_index = 1
+scale = Vector2(8, 8)
+script = ExtResource("1_bdhq7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.18, 0.18)
+sprite_frames = SubResource("SpriteFrames_kg0vs")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.754802
+
+[node name="RunCol" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_1kdi0")
+
+[node name="DuckCol" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 3.5)
+shape = SubResource("RectangleShape2D_miygo")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_n3p8f")
+volume_db = -25.0
+
+[node name="IdleSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_i7xog")
+
+[node name="RunSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_451vl")

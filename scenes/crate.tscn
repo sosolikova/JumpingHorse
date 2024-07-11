@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2kyb5gh5vqwg"]
+
+[ext_resource type="Texture2D" uid="uid://dh3f5a7x3564u" path="res://assets/img/obstacles/crate.png" id="1_frdso"]
+
+[node name="crate" type="Area2D"]
+position = Vector2(0, 20)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 50)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_frdso")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 50)
+scale = Vector2(0.2, 0.2)
+polygon = PackedVector2Array(69.9, -208, 70.5, -208, 209, -126.9, 209, -124.5, 240, -80, 240, 80, 0, 200, -240, 80, -240, -80, -171.6, -177.3, -76, -218.2, -10.1, -220)

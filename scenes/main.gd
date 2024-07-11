@@ -5,14 +5,20 @@ var stump_scene = preload("res://scenes/stump.tscn")
 var rock_scene = preload("res://scenes/rock.tscn")
 var barell_scene = preload("res://scenes/barell.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
-var obstacle_types := [stump_scene, rock_scene, barell_scene]
+var hay_scene = preload("res://scenes/hay.tscn")
+var fence_scene = preload("res://scenes/fence.tscn")
+var tree_stump_scene = preload("res://scenes/tree_stump.tscn")
+var crate_scene = preload("res://scenes/crate.tscn")
+var timber_scene = preload("res://scenes/timber.tscn")
+
+var obstacle_types := [rock_scene, hay_scene, fence_scene, tree_stump_scene, crate_scene, timber_scene]
 var obstacles : Array
 var bird_heights := [200, 390]
 
 
 
 # Game variables
-const DINO_START_POS := Vector2i(150, 485)
+const HORSE_START_POS := Vector2i(150, 485)
 const CAM_START_POS := Vector2i(576, 324)
 var difficulty
 const MAX_DIFFICULTY : int = 2
@@ -50,8 +56,8 @@ func new_game():
 		
 	
 	# Reset the nodes
-	$Dino.position = DINO_START_POS
-	$Dino.velocity = Vector2i(0,0)
+	$Horse.position = HORSE_START_POS
+	$Horse.velocity = Vector2i(0,0)
 	$Camera2D.position = CAM_START_POS
 	$Ground.position = Vector2i(0,0)
 	
@@ -71,8 +77,8 @@ func _process(delta):
 		# Generate obstacles
 		generate_obs()
 		
-		# Move dino and camera
-		$Dino.position.x += speed
+		# Move horse and camera
+		$Horse.position.x += speed
 		$Camera2D.position.x += speed
 		
 		# Update score
@@ -126,7 +132,7 @@ func remove_obs(obs):
 	obstacles.erase(obs)
 
 func hit_obs(body):
-	if body.name == "Dino":
+	if body.name == "Horse":
 		game_over()
 	
 		
